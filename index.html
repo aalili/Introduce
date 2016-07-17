@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>李鹏远的简历</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scale=no">
+<link rel="stylesheet" href="jquery.fullPage.min.css">
+<style>
+*{margin:0;padding:0;}
+body{background-color:#ccc;}
+a{text-decoration:none;}
+li{list-style:none;}
+
+#header{position:fixed;text-align:center;color:#fff;top:0;font-size:30px;width:100%;background-color:rgba(220,190,121,0.8);padding-bottom:20px;}
+#header-text{text-align:center;color:#fff;top:0;font-size:30px;left:44%;}
+#menu{text-align:center;color:#fff;top:0;font-size:30px;left:48%;width:100%;padding-left:36.5%;}
+#menu li{float:left;margin-right:2%;height:30px;width:5%;border-radius:20px;}
+#menu li a{font-size:18px;text-decoration:none;text-align:center;line-height:30px;color:#000;display:block;width:100%;height:100%;border-radius:20px;}
+#menu li a:hover{background-color:red;}
+.menu-active{background-color:red;}
+#firstPage{background:url(img/web.png) 100% no-repeat;background-size:100%;}
+#secondPage{background:url(img/sunings.png) 100% no-repeat;background-size:100%;}
+
+
+#chart{margin:0 auto;}
+#tap{margin:0 auto;position:relative;width:1000px;}
+#skill-list{margin:0 auto;width:100%;height:50px;margin:20px 0;}
+#skill-list li{float:left;text-align:center;background-color:green;margin-left:7px;border-radius:20px;}
+#skill-list .skill-list-active{background-color:#9a7958;}
+#skill-list li a{line-height:40px;text-align:center;display:block;width:100px;height:40px;border-radius:20px;padding:14px;}
+#skill-list li a:hover{font-size:20px;font-weight:bold;line-height:40px;text-decoration:none;}
+.clearfix:after{content:" ";clear:both;display:block;height:0;visibility:hidden;}
+.clearfix{zoom:1;}
+.skill-detail{margin:0 auto;width:100%;display:none;height:200px;padding-top:20px;}
+.skill-detail p{text-indent:2em;padding-top:10px 0;color:#fff;}
+.skill-active{display:block;}
+
+
+#history{margin-top:-200px;padding:10px 0;position:relative;height:80%;margin:0 auto;width:1000px;}
+#history li{position:relative;border:3px solid #999;text-align:center;border-radius:30px;line-height:24px;color:#fff;font-weight:bold;}
+#now{margin:30px auto;width:300px;}
+.work-box{transition:1s;}
+.work-box:hover{-webkit-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+-moz-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+-o-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+
+margin-top:20px;margin-bottom:20px;position:relative;}
+#middle{top:800px;}
+#first{top:800px;}
+.slide img{width:16%;height:600px;border:none;display:block;margin:0 auto;}
+.slide p{margin-top:10px;text-align:center;border-radius:20px;background-color:#0CF;width:20%;margin:10px auto;}
+.production-link{display:block;text-align:center;width:200px;height:30px;background-color:#3fa6f3;border-radius:20px;line-height:30px;margin:0 auto;}
+.production-link:hover{color:#000;font-weight:700;}
+
+
+#head-img{height:100px;width:90px;margin:0 auto;padding:30px;}
+#head-img img{height:100px;width:90px;border-radius:50%;margin:0 auto;}
+.bottom-p{font-size:24px;font-weight:bold;margin:0 auto;text-align:center;line-height:40px;height:40px;}
+#say{font-size:24px;}
+#left-detail{margin:0 auto;font-size:24px;font-weight:bold;text-align:center;line-height:40px}
+#left-detail ul li{font-weight:bold;text-align:center;padding:10px 0;line-height:40px;height:40px;}
+
+
+<!--@import url("indexc.css") screen and (min-width:400px) and (max-width:800px);-->
+
+@media screen and (max-width:400px) {		
+#header{position:fixed;text-align:center;color:#fff;top:0;font-size:14px;width:100%;background-color:rgba(220,190,121,0.8);padding-bottom:0;}
+#header-text{text-align:center;color:#fff;top:0;font-size:14px;left:0;}
+#menu{text-align:center;color:#fff;top:0;font-size:30px;left:0;width:100%;padding-left:0%;display:none;}
+.section{width:100%;height:100%;}
+#firstPage{background:url(img/web.jpg) no-repeat;background-size:auto; }
+#secondPage{background:url(img/sunings.jpg) no-repeat;background-size:auto;}
+#chart{margin:20px auto;}
+#tap{margin:0 auto;position:relative;width:100%;}
+#skill-list{width:100%;height:20px;margin:0 0;}
+#skill-list li{float:left;text-align:center;background-color:green;margin-left:0px;border-radius:10px;}
+#skill-list .skill-list-active{background-color:#9a7958;}
+#skill-list li a{line-height:20px;text-align:center;display:block;width:40px;height:20px;border-radius:10px;padding:4px;font-size:10px;}
+#skill-list li a:hover{font-size:14px;font-weight:bold;line-height:20px;text-decoration:none;}
+.clearfix:after{content:" ";clear:both;display:block;height:0;visibility:hidden;}
+.clearfix{zoom:1;}
+.skill-detail{margin:0 auto;width:100%;display:none;height:200px;padding-top:20px;}
+.skill-detail p{text-indent:0;padding-top:10px 0;color:#fff;font-size:10px;}
+.skill-active{display:block;}
+
+
+#history{top:-100px;padding:0 0;position:relative;height:80%;margin:0 auto;width:100%;}
+#history li{position:relative;border:1px solid #999;text-align:center;border-radius:30px;line-height:14px;color:#fff;font-weight:bold;font-size:10px;}
+#now{margin:0 auto;width:200px;margin-top:140px;}
+.work-box{transition:1s;}
+.work-box:hover{-webkit-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+-moz-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+-o-box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+box-shadow:0 0 30px 10px rgba(244,122,134,0.4);
+
+margin-top:20px;margin-bottom:20px;position:relative;}
+#middle{top:800px;}
+#first{top:800px;}
+
+
+#3rdPage{position:relative;}
+#fullpage .slide{position:relative;height:100%;width:100%;position:relative;}
+.slide div{position:relative;width:100%;height:500px;position:relative;}
+.slide-a{display:block;width:280px;height:400px;margin:0 auto;position:relative;padding:5px;}
+.slide img{width:90%;height:390px;}
+.slide p{margin-top:10px;text-align:center;border-radius:20px;background-color:#0CF;width:100%;margin:10px auto;}
+.production-link{display:block;text-align:center;width:200px;height:30px;background-color:#3fa6f3;border-radius:20px;line-height:30px;margin:0 auto;}
+.production-link:hover{color:#000;font-weight:700;}
+
+
+#head-img{height:100px;width:90px;margin:0 auto;padding:30px;}
+#head-img img{height:100px;width:90px;border-radius:50%;margin:0 auto;}
+.bottom-p{font-size:14px;font-weight:bold;margin:0 auto;text-align:center;line-height:40px;height:40px;}
+#say{font-size:12px;}
+#left-detail{margin:0 auto;font-size:14px;font-weight:bold;text-align:center;line-height:20px}
+#left-detail ul li{font-weight:bold;text-align:center;padding:10px 0;line-height:20px;height:20px;}
+	
+}
+</style>
+</head>
+<body>
+<div id="header">
+	<div id="header-text">李鹏远的简历</div>
+	<ul id="menu">
+        <li data-menuanchor="firstPage" class="menu-active"><a href="#firstPage">技能掌握</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">工作经历</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">作品列表</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">个人信息</a></li>
+	</ul>
+</div>
+<div id="fullpage">
+    <div id="firstPage" data-anchors="page1" class="section">
+        <!--<div id="chart" style="width:800px;height:500px;">
+        </div>-->
+        <div id="chart" style="width:80%;height:50%;">
+        </div>
+        <div id="tap">
+        	<ul id="skill-list">
+            	<li class="skill-list-active"><a href="javascript:">javascript</a></li>
+                <li><a href="#">Css(3)</a></li>
+                <li><a href="#">Html(5)</a></li>
+                <li><a href="#">JQuery</a></li>
+                <li><a href="#">Bootstrap</a></li>
+                <li><a href="#">Tool</a></li>
+            </ul>
+            <div class="skill-detail skill-active">
+            	<p>能使用合适的结构编写兼容主流浏览器的页面布局；</p>
+                <p>了解HTML 5新标签的语义；</p>
+                <p>能熟练使用Chrome开发者工具、FireBug等工具辅助开发；</p>
+            </div>
+            <div class="skill-detail ">
+            	<p>能适当运用CSS 3使页面在现代浏览器上效果更佳；</p>
+				<p>了解媒体轮询，可开发响应式页面</p>
+            </div>
+            <div class="skill-detail ">
+            	<p>熟悉原生JS编程</p>
+                <p>可开发原生组件</p>
+                <p>掌握面向对象编程方法</p>
+                <p>熟悉 JSONP, AJAX,根据后台数据创建良好的交互页面</p>
+            </div>
+            <div class="skill-detail ">
+            	<p>掌握Jq用法，提高产品兼容性</p>
+                <p>了解jq设计思想</p>
+            </div>
+            <div class="skill-detail ">
+            	<p>掌握格栅化布局思想</p>
+                <p>使用框架开发动态响应式网页，兼容各个平台</p>
+                <p>在框架的基础组件上实现二次开发</p>
+            </div>
+            <div class="skill-detail">
+                <p>可使用Ps进行切图，将设计意图转化为前端产品；</p>
+                <p>Firbug,熟练使用火狐开发者工具，调整网页效果，定位错误信息，优化体验效果</p>
+                <p>Git,掌握git版本控制工具用法，完善产品开发流程，强化产品开发管理</p>
+            </div>
+        </div>  
+    </div>
+    <div id="secondPage" data-anchors="page2" class="section">
+        <ul id="history">
+        	<li id="now"><div class="work-time"><span>2015.12-现在</span></div>
+            	<div class="work-space">自学前端开发</div>
+            </li>
+            <li id="middle" class="work-box"><div class="work-time"><span>2014.1-2015.11</span></div>
+            	<div class="work-space">苏宁云商豫南大区</div>
+                <div class="job-title">苏宁云商豫南大区开发部经理</div>
+            	<div class="job-content">
+                	<p>进行片区内商场排查，商场信息核实及维护。竞争对手信息收集与维护。</p>
+					<p>制定开发计划，根据门店销售情况制定降租减租计划，约谈房东落实减租计划。</p>
+					<p>苏宁易购快递自提柜洽谈开发</p>
+					<p>地方政府扶持政策收集与维护</p>
+                    <p>大区物流仓库选址，并投入运营</p>
+                    <p>对接平顶山政府推进苏宁广场选址开发事宜</p>
+                </div>
+            </li>
+            <li id="first" class="work-box"><div class="work-time"><span>2012.6-2013.12</span></div>
+            	<div class="work-space">南京徐庄苏宁总部</div>
+                <div class="job-title">苏宁银河酒店管理公司工程物业部助理</div>
+            	<div class="job-content">
+                	<p>梳理部门业务流程，细化部门人员职责，上报总裁办并获得批准</p>
+                	<p>对接下属五星级酒店工程物业日常事务</p>
+                    <p>参与南京青奥会筹备，与政府相关部门对接完善安保，餐饮，消防等事宜</p>
+					<p>酒店工程整改事宜协调，解决前期遗留问题</p>
+					<p>跟进南京苏宁钟山高尔夫酒店翻新事宜，整理翻新需求，协调各方推进工程进行</p>
+                    <p>获得2013年部门最佳员工奖，并进入苏宁大学中级经理A梯队培训</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="3rdPage" data-anchors="page3" class="section">
+        <div class="slide">
+        	<div>
+                <a class="slide-a" href="#">
+                    <img src="img/zuopin1.png" alt="仿邢帅教育官网首页"/>
+                </a>
+                <p>使用Bootstrap框架，兼容移动端，pc端</p>
+                <a class="production-link" href="#" target="">获取完整文件</a>
+            </div>
+        </div>
+        <div class="slide">
+        	<div>
+                <a class="slide-a" href="#">
+                    <img src="img/zuopin2.jpg" alt="仿邢帅教育官网首页"/>
+                </a>
+                <p>pc端，兼容ie7以上版本，及各浏览器</p>
+                <a class="production-link" href="#" target="">获取完整文件</a>
+            </div>
+        
+        </div>
+        <div class="slide">
+        	<div>
+                <a class="slide-a" href="#">
+                    <img src="img/jidong.png" alt="仿京东首页"/>
+                </a>
+                <p>pc端，兼容ie7以上版本，及各浏览器</p>
+                <a class="production-link" href="#" target="">获取完整文件</a>
+            </div>
+        </div>
+        <div class="slide">
+        	<div>
+                <a class="slide-a" href="#">
+                    <img src="img/jizhi.png" alt="仿机智云首页"/>
+                </a>
+                <p>使用Bootstrap框架，兼容移动端，pc端</p>
+                <a class="production-link" href="#" target="">获取完整文件</a>
+            </div>
+        </div>
+	</div>
+    <div id="4thpage" data-anchors="page4" class="section">
+    	<div id="head-img"><a href="javaScript:">
+        	<img src="img/head.jpg" alt="头像"/></a>
+        </div>
+        <p class="bottom-p">李鹏远</p>
+        <p class="bottom-p" id="say">每天进步一点点</p>
+        <div id="left-detail">
+            <ul>
+            	<li>毕业院校:吉林大学</li>
+                <li>专业：行政管理</li>
+                <li>1990.06.23</li>
+                <li>18637503500</li>
+                <li>lipengyua@yeah.net</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="jquery.easings.min.js"></script>
+<script type="text/javascript" src="scrolloverflow.min.js"></script>
+<script type="text/javascript" src="jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="echarts.min.js"></script>
+<script type="text/javascript" src="move.js"></script>
+<script>
+$(function(){
+    $('#fullpage').fullpage({
+        verticalCentered: true,
+        css3: true,
+        sectionsColor: ['#254875', '#00FF00', '#254587', '#695684'],
+		slidesColor: ['#254875', '#00FF00', '#254587', '#695684'],
+        anchors: ['page1', 'page2', 'page3', 'page4'],
+		animateAnchor:true,
+        loopTop:true,
+		loopBottom:true,
+		loopHorizontal:true,
+		scrollBar:true,
+		paddingTop:0,
+		paddingBottom:0,
+		fixedElements:'#header',
+		touchSensitivity:15,
+		recordHistory:true,
+		menu:'#menu',
+		
+		navigation:true,
+		navigationTooltips:['技能掌握', '工作经历', '作品列表', '个人信息'],
+		//载入页面时触发
+		afterLoad:function(link,index){
+			switch(index){
+				case 1:
+					$('#menu li').removeClass('menu-active');
+					$('#menu li').eq(index-1).addClass('menu-active');
+					move('#chart').scale('1').end();
+					break;
+				case 2:
+					$('#menu li').removeClass('menu-active');
+					$('#menu li').eq(index-1).addClass('menu-active');
+					move('#middle').set('top',0).end(function(){
+						move('#first').set('top',0).end();
+						});
+					
+					break;
+				case 3:
+					$('#menu li').removeClass('menu-active');
+					$('#menu li').eq(index-1).addClass('menu-active');
+					break;
+				case 4:
+					$('#menu li').removeClass('menu-active');
+					$('#menu li').eq(index-1).addClass('menu-active');
+					break;
+				default:
+					break;
+				
+				}
+			},
+		//离开页面时触发
+		onLeave:function(link,index){
+			switch(index){
+				case 1:
+					move('#chart').scale(1.2).end();
+					break;
+				case 2:
+					move('#middle').set('top','800px').end(function(){
+						move('#first').set('top','800px').end();
+						});
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				default:
+					break;
+				
+				}
+			},
+		//页面载入完毕
+		afterRender:function(link,index){
+			switch(index){
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				default:
+					break;
+				
+				}
+			}
+		
+		
+    })
+	
+	//技能雷达图
+	var myChart = echarts.init(document.getElementById('chart'));
+	option = {
+		title: {
+			text: '技能雷达图'
+		},
+		tooltip: {},
+		legend: {
+			data: ['掌握程度']
+		},
+		radar: {
+			// shape: 'circle',
+			indicator: [
+			   { name: 'javaScript', max: 100},
+			   { name: 'Css(3)', max: 100},
+			   { name: 'Html(5)', max: 100},
+			   { name: 'JQuery', max: 100},
+			   { name: 'Bootstrap', max: 100},
+			   { name: 'Tool', max: 100}
+			]
+		},
+		series: [{
+			name: '',
+			type: 'radar',
+			// areaStyle: {normal: {}},
+			data : [
+				{
+					value : [85, 90, 86, 79, 84, 86],
+					name : '各技能掌握情况'
+				}
+			]
+		}]
+	};
+	myChart.setOption(option);
+	
+	//技能切换区域选项卡
+	$('#skill-list li').each(function(index,element){
+		$(element).click(
+			function(){
+				$('#skill-list li').removeClass('skill-list-active');
+				$(this).addClass('skill-list-active')
+				$('.skill-detail').removeClass('skill-active');
+				$('.skill-detail').eq(index).addClass('skill-active')
+				})
+		})
+})
+</script>
+</body>
+</html>
